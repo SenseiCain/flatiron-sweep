@@ -1,5 +1,6 @@
 import sys
 from .generate_repos import *
+from .generate_file_tree import *
 
 def main():
 	args = sys.argv[1:]
@@ -12,11 +13,17 @@ def main():
 		github_user = token_array[0]
 		github_token = token_array[1]
 
+	# Create repo.txt if --txt flag present
 	if '--txt' in args:
-		# Create repo.txt if --txt flag present
 		create_text = True
 
-	generate_repos(regex_exp, github_user, github_token, create_text)
+	list_of_repos = generate_repos(regex_exp, github_user, github_token, create_text)
+
+	if '--clone' in args:
+		# Create directory in Desktop
+		# Clones list of repos that match
+		generate_file_tree()
+
 
 if __name__ == '__main__':
     main()
