@@ -11,11 +11,8 @@
 
 import os
 
-def generate_file_tree():
+def generate_file_tree(parent_path):
 	print('Creating file tree...')
-
-	desktop = os.path.expanduser('~/desktop')
-	parent_path = f'{desktop}/flatiron'
 
 	try:
 	    os.mkdir(parent_path)
