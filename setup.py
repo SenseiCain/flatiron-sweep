@@ -1,10 +1,10 @@
 from setuptools import setup
 setup(
-    name = 'flation-sweep',
+    name = 'flation_sweep',
     version = '0.1.0',
-    packages = ['flatiron-sweep'],
+    packages = ['flatiron_sweep'],
     entry_points = {
         'console_scripts': [
-            'flatiron-sweep = flatiron-sweep.__main__:main'
+            'flatiron_sweep = flatiron_sweep.__main__:main'
         ]
     })
