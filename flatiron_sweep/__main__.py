@@ -1,6 +1,7 @@
 import sys
 from .generate_repos import *
 from .generate_file_tree import *
+from .clone_repo import *
 
 def main():
 	args = sys.argv[1:]
@@ -21,8 +22,14 @@ def main():
 
 	if '--clone' in args:
 		# Create directory in Desktop
-		# Clones list of repos that match
-		generate_file_tree()
+		desktop = os.path.expanduser('~/desktop')
+		parent_path = f'{desktop}/flatiron'
+		generate_file_tree(parent_path)
+
+		# Clones repos that match regex
+		# Cloned to file tree created above w/ basic filtering
+		for repo in list_of_repos[:5]:
+			clone_repo(repo, parent_path, github_user)
 
 
 if __name__ == '__main__':
