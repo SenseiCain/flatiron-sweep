@@ -1,5 +1,7 @@
 import sys
 import argparse
+from github import Github
+
 from .generate_file_tree import *
 from .get_repos import *
 from .generate_list_file import *
@@ -29,12 +31,18 @@ def gather_credentials():
 
 def main():
 	if args.txt or args.clone or args.delete:
+		# Gather credentials
 		credentials = gather_credentials()
 		github_user = credentials[0]
 		github_token = credentials[1]
 		regex_exp = credentials[2]
 
-		list_of_repos = get_repos(regex_exp, github_user, github_token)
+		# Create GitHub instance
+		g = Github(github_user, github_token)
+		user = g.get_user()
+		user.login
+
+		list_of_repos = get_repos(g, regex_exp, github_user, github_token)
 
 		if args.txt:
 			generate_list_file(list_of_repos)
