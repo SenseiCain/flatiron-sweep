@@ -3,6 +3,7 @@ import argparse
 from .generate_file_tree import *
 from .get_repos import *
 from .generate_list_file import *
+from .clone_repo import *
 
 regex_exp = '081219'
 
@@ -38,7 +39,13 @@ def main():
 		if args.txt:
 			generate_list_file(list_of_repos)
 		if args.clone:
-			print('--clone flag used')
+			desktop = os.path.expanduser('~/desktop')	
+			parent_path = f'{desktop}/flatiron'
+
+			generate_file_tree(parent_path)
+
+			for repo in list_of_repos:
+				clone_repo(repo, parent_path, github_user)
 		elif args.delete:
 			print('--delete flag used')
 
