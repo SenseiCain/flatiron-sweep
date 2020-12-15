@@ -5,17 +5,17 @@ from .get_repos import *
 from .generate_list_file import *
 from .clone_repo import *
 
-parser = argparse.ArgumentParser(description='Clones & deletes Flatiron repos')
+parser = argparse.ArgumentParser(description='Clones & deletes Flatiron repos. Recommended to run with --txt flag prior to cloning or deleting in order to verify flagged repos!')
 
 # Txt flag creates a file with a list of flagged repos
 parser.add_argument('--txt', action="store_true",
 	help='Generates a txt file listing flagged repos')
 
-# Clone flag creates clones all repos that meet condition
+# Clone flag clones all repos that meet condition
 parser.add_argument('--clone', action="store_true",
-	help='Create directory in Dekstop & clones all flagged repos')
+	help='Creates a directory in Dekstop & clones all flagged repos')
 
-# Delete flag creates deletes all repos that meet condition
+# Delete flag deletes all repos that meet condition
 parser.add_argument('--delete', action="store_true",
 	help='Deletes all flagged repos')
 
@@ -40,7 +40,7 @@ def main():
 			generate_list_file(list_of_repos)
 		if args.clone:
 			desktop = os.path.expanduser('~/desktop')	
-			parent_path = f'{desktop}/flatiron'
+			parent_path = f'{desktop}/flatiron_sweep'
 
 			generate_file_tree(parent_path)
 
