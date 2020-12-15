@@ -5,8 +5,6 @@ from .get_repos import *
 from .generate_list_file import *
 from .clone_repo import *
 
-regex_exp = '081219'
-
 parser = argparse.ArgumentParser(description='Clones & deletes Flatiron repos')
 
 # Txt flag creates a file with a list of flagged repos
@@ -26,13 +24,15 @@ args = parser.parse_args()
 def gather_credentials():
 	github_user = input('User: ')
 	github_token = input('Token: ')
-	return [github_user, github_token]
+	regex_exp = input('6 digit cohort date: ')
+	return [github_user, github_token, regex_exp]
 
 def main():
 	if args.txt or args.clone or args.delete:
 		credentials = gather_credentials()
 		github_user = credentials[0]
 		github_token = credentials[1]
+		regex_exp = credentials[2]
 
 		list_of_repos = get_repos(regex_exp, github_user, github_token)
 
