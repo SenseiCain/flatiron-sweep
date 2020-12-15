@@ -40,7 +40,7 @@ def main():
 			generate_list_file(list_of_repos)
 		if args.clone:
 			desktop = os.path.expanduser('~/desktop')	
-			parent_path = f'{desktop}/flatiron_sweep'
+			parent_path = f'{desktop}/flatiron_repos'
 
 			generate_file_tree(parent_path)
 
