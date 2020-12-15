@@ -6,6 +6,7 @@ from .generate_file_tree import *
 from .get_repos import *
 from .generate_list_file import *
 from .clone_repo import *
+from .delete_repo import *
 
 parser = argparse.ArgumentParser(description='Clones & deletes Flatiron repos. Recommended to run with --txt flag prior to cloning or deleting in order to verify flagged repos!')
 
@@ -46,6 +47,7 @@ def main():
 
 		if args.txt:
 			generate_list_file(list_of_repos)
+
 		if args.clone:
 			desktop = os.path.expanduser('~/desktop')	
 			parent_path = f'{desktop}/flatiron_repos'
@@ -54,9 +56,12 @@ def main():
 
 			for repo in list_of_repos:
 				clone_repo(repo, parent_path, github_user)
-		elif args.delete:
-			print('--delete flag used')
+				if args.delete:
+					delete_repo(g, repo)
 
+		elif args.delete:
+			for repo in list_of_repos:
+				delete_repo(g, repo)
 
 if __name__ == '__main__':
     main()
