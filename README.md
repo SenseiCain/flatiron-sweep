@@ -8,7 +8,10 @@ A CLI for cloning & optionally deleting repos associated with the Flatiron curri
 
 Generate a GitHub token, and enable the delete option if you wish to delete repos as well.
 
-After calling `flatiron_sweep` with the appropriate flags, you will be prompted to input your: GitHub username, GitHub token, and the 6 digit date of your cohort.
+After calling `flatiron_sweep` with the appropriate flags, you will be prompted to input your: 
+- GitHub username
+- GitHub token
+- 6 digit date of your cohort.
 
 # Flagged Repos
 
@@ -20,7 +23,7 @@ This generates a .txt file in the Desktop directory with a list of repos that th
 
 `$ flation_sweep --clone`
 
-This creates a directory called 'flatiron_sweep' in Dekstop, and clones all repos that contain the 6 digit cohort substring. Includes basic filtering.
+This creates a directory called 'flatiron_repos' in Dekstop, and clones all repos that contain the 6 digit cohort substring. Includes basic filtering.
 
 # Deleting
 
