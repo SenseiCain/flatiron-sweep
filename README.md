@@ -1,10 +1,6 @@
 A CLI for cloning & optionally deleting repos associated with the Flatiron curriculum.
 
-# Dislcaimer
-
-This has the potential to automatically delete mass amounts of repos. I'd advise running this with only the --txt flag at first to verify which repos are flagged.
-
-Also, if using --clone, ensure that a directory named 'flatiron_repos' does not already exist in Desktop.
+**Disclaimer** - This has the potential to automatically delete mass amounts of repos. I'd advise running this with only the --txt flag at first to verify which repos are flagged.
 
 # Getting Started
 
