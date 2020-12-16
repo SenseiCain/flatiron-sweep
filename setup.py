@@ -1,6 +1,6 @@
 from setuptools import setup
 setup(
-    name = 'flation_sweep_SenseiCain',
+    name = 'flatiron_sweep',
     author = 'SenseiCain',
     url = 'https://github.com/SenseiCain/flatiron_sweep',
     version = '0.1.0',
