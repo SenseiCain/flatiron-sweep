@@ -1,5 +1,7 @@
 A CLI for cloning & optionally deleting repos associated with the Flatiron curriculum.
 
+Step by step - https://christian24cain.medium.com/how-to-clone-optionally-delete-flatiron-curriculum-repos-b11521477ecb
+
 **Disclaimer** - This has the potential to automatically delete mass amounts of repos. I'd advise running this with only the --txt flag at first to verify which repos are flagged.
 
 # Getting Started
