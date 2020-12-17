@@ -4,6 +4,8 @@ Step by step - https://christian24cain.medium.com/how-to-clone-optionally-delete
 
 **Disclaimer** - If you're looking to delete, ensure that you use the --txt flag only first to scan through repos that get flagged. Deleting repos will also erase contributions, though pull requests for curriculum repos will still be visible.
 
+If you do not wish to delete, then do not select the delete option when creating your GitHub Token.
+
 [Future Update] - provide the option to mark repos as private, so contributions are preserved.
 
 # Getting Started
