@@ -2,7 +2,9 @@ A CLI for cloning & optionally deleting repos associated with the Flatiron curri
 
 Step by step - https://christian24cain.medium.com/how-to-clone-optionally-delete-flatiron-curriculum-repos-b11521477ecb
 
-**Disclaimer** - If you're looking to delete, ensure that you use the --txt flag only first to scan through repos that get flagged. Deleting repos will also erase contributions, though pull requests for curriculum repos will still be visible.
+# Disclaimer
+
+If you're looking to delete, ensure that you use the --txt flag only first to scan through repos that get flagged. Deleting repos will also erase contributions, though pull requests for curriculum repos will still be visible.
 
 If you do not wish to delete, then do not select the delete option when creating your GitHub Token.
 
