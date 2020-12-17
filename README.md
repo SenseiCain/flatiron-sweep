@@ -2,13 +2,15 @@ A CLI for cloning & optionally deleting repos associated with the Flatiron curri
 
 Step by step - https://christian24cain.medium.com/how-to-clone-optionally-delete-flatiron-curriculum-repos-b11521477ecb
 
-**Disclaimer** - This has the potential to automatically delete mass amounts of repos. I'd advise running this with only the --txt flag at first to verify which repos are flagged.
+**Disclaimer** - If you're looking to delete, ensure that you use the --txt flag only first to scan through repos that get flagged. Deleting repos will also erase contributions, though pull requests for curriculum repos will still be visible.
+
+[Future Update] - provide the option to mark repos as private, so contributions are preserved.
 
 # Getting Started
 
 `$ pip install flatiron_sweep`
 
-Generate a GitHub token, and enable the delete option if you wish to delete repos as well.
+Generate a GitHub token, and enable the delete option only if you wish to delete repos as well.
 
 After calling `flatiron_sweep` with the appropriate flags, you will be prompted to input your: 
 - GitHub username
